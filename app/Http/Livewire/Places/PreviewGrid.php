@@ -10,7 +10,6 @@ class PreviewGrid extends Component
 {
     public $places;
     public $filters;
-    public $appliedFilters = [];
 
     public function mount()
     {
@@ -31,10 +30,4 @@ class PreviewGrid extends Component
     {
         return view('livewire.places.preview-grid');
     }
-
-    // default dont show
-    // if click in search box
-    // show filters
-    // if typed in search box
-    // show filters and places (top 10)
 }

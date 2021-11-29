@@ -32,6 +32,6 @@ class DatabaseSeeder extends Seeder
             'updated_at' => now(),
         ]);
         \App\Models\Subscriber::factory(10)->create();
-        \App\Models\Place::factory(10)->create();
+        \App\Models\Place::factory(12)->create();
     }
 }

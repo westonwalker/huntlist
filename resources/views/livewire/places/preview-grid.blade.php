@@ -2,24 +2,23 @@
     function showPlace(place, currentFilters) {
         let result = true;
         currentFilters.forEach(function (filter) {
-            console.log(filter);
-            if (filter.id == "fishing") {
-                result = place.fishing_score > 0;
+            if (result) {
+                if (filter.id == "fishing") {
+                    result = place.fishing_score > 0;
+                }
+                if (filter.id == "whitetail_hunting") {
+                    result = place.whitetail_score > 0;
+                }
+                if (filter.id == "big_whitetails") {
+                    result = place.big_whitetails > 0;
+                }
+                if (filter.id == "ice_fishing") {
+                    result = place.ice_fishing_score > 0;
+                }
             }
-            if (filter.id == "whitetail_hunting") {
-                result = place.whitetail_score > 0;
-            }
-            if (filter.id == "big_whitetails") {
-                result = place.big_whitetails > 0;
-            }
-            //if (!result) break;
         });
-        console.log(result);
         return result;
-    }
 
-    function test() {
-      return true;
     }
 </script>
 
@@ -89,14 +88,12 @@
             </template>
         </div>
     </div>
-    <ul role="list" class="mt-6 grid  grid-cols-2 gap-x-4 gap-y-8 sm:grid-cols-3 sm:gap-x-6 lg:grid-cols-4 xl:gap-x-8">
+    <ul role="list" class="mt-6 grid grid-cols-1 gap-x-4 gap-y-8 sm:grid-cols-2 sm:gap-x-6 md:grid-cols-3 xl:grid-cols-4 xl:gap-x-8">
         @foreach ($places as $place)
-        <div x-data="{ place: @js($place)}">
-            <template x-if="showPlace(place, currentFilters)">
-                <li class="relative group cursor-pointer rounded-lg">
-                    <x-place-card :place="$place" />
-                </li>
-            </template>
+        <div x-data="{ place: @js($place)}" x-show="showPlace(place, currentFilters)">
+            <li class="relative group cursor-pointer rounded-lg">
+                <x-place-card :place="$place" />
+            </li>
         </div>
         @endforeach
     </ul>

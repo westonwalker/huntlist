@@ -30,13 +30,14 @@ class PlaceFactory extends Factory
             'https://images.unsplash.com/photo-1523712999610-f77fbcfc3843?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1950&q=80',
             'https://images.unsplash.com/photo-1518627675569-e9d4fb90cdb5?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1950&q=80',
         ];
-        return [
-            'name' => $this->faker->name(),
-            'slug' => $this->faker->name(),
-            'display_name' => $this->faker->name(),
+        $schema = [
+            'name' => $this->faker->streetName,
+            'display_name' => $this->faker->city() . ', ' . $this->faker->country(),
             'whitetail_score' => $this->faker->numberBetween(0, 10),
             'fishing_score' => $this->faker->numberBetween(0, 10),
             'cover_image' =>    $this->faker->randomElement($coverImages),
         ];
+        $schema['slug'] = Str::slug($schema['name']);
+        return $schema;
     }
 }
