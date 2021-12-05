@@ -1,3 +1,5 @@
+@props(['places', 'filters'])
+
 <script>
     function showPlace(place, currentFilters) {
         let result = true;
@@ -9,11 +11,14 @@
                 if (filter.id == "whitetail_hunting") {
                     result = place.whitetail_score > 0;
                 }
-                if (filter.id == "big_whitetails") {
-                    result = place.big_whitetails > 0;
+                if (filter.id == "elk") {
+                    result = place.elk_score > 0;
                 }
-                if (filter.id == "ice_fishing") {
-                    result = place.ice_fishing_score > 0;
+                if (filter.id == "mule_deer") {
+                    result = place.mule_deer_score > 0;
+                }
+                if (filter.id == "turkey") {
+                    result = place.turkey_score > 0;
                 }
             }
         });
@@ -44,7 +49,7 @@
                         <template x-for="filter in filters" :key="filter.id">
                             <div>
                                 <template x-if="filter.type == 'place'">
-                                    <a href="/" x-show="searchValue.length > 1 && filter.name.toLowerCase().includes(searchValue.toLowerCase())" class="focus-within:bg-yellow-500">
+                                    <a x-bind:href="'/places/'+filter.slug" x-show="searchValue.length > 1 && filter.name.toLowerCase().includes(searchValue.toLowerCase())" class="focus-within:bg-yellow-500">
                                         <div class="hover:bg-yellow-500 px-1 py-2 rounded-lg">
                                             <div x-text="'📍&nbsp;&nbsp;&nbsp;'+filter.name">
                                                 <span class="float-right ml-1 mr-2">➡️</span>
@@ -89,12 +94,18 @@
         </div>
     </div>
     <ul role="list" class="mt-6 grid grid-cols-1 gap-x-4 gap-y-8 sm:grid-cols-2 sm:gap-x-6 md:grid-cols-3 xl:grid-cols-4 xl:gap-x-8">
+        @php
+        $count = 1;
+        @endphp
         @foreach ($places as $place)
-        <div x-data="{ place: @js($place)}" x-show="showPlace(place, currentFilters)">
+        <div x-data="{ place: {{ $place->toJson() }}}" x-show="showPlace(place, currentFilters)">
             <li class="relative group cursor-pointer rounded-lg">
-                <x-place-card :place="$place" />
+                <x-place-card :place="$place" :rank="$count" />
             </li>
         </div>
+        @php
+        $count++;
+        @endphp
         @endforeach
     </ul>
 </div>

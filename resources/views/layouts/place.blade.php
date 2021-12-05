@@ -10,7 +10,6 @@
 
     <!-- Styles -->
     <link rel="stylesheet" href="{{ asset('css/app.css') }}">
-    @livewireStyles
     <style>
         .emoji {
             font-weight: initial !important;
@@ -18,6 +17,10 @@
 
         [x-cloak] {
             display: none !important;
+        }
+
+        .text-shadow {
+            text-shadow: 1px 1px 0 rgb(0 0 0 / 35%), 1px 1px 5px rgb(0 0 0 / 50%);
         }
     </style>
 </head>
@@ -30,9 +33,7 @@
         </main>
     </div>
 
-    @livewireScripts
     <script src="{{ asset('js/app.js') }}" defer></script>
-    {{-- <script src="https://cdn.jsdelivr.net/gh/livewire/turbolinks@v0.1.x/dist/livewire-turbolinks.js" data-turbolinks-eval="false"></script> --}}
 </body>
 
 </html>

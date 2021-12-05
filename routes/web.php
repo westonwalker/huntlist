@@ -1,10 +1,8 @@
 <?php
 
 use Illuminate\Support\Facades\Route;
-use App\Http\Livewire\Pages\Home;
-use App\Http\Livewire\Pages\Contribute;
-use App\Http\Livewire\Pages\Subscribe;
-use App\Http\Livewire\Places\Show as PlacesShow;
+use App\Http\Controllers\PageController;
+use App\Http\Controllers\PlaceController;
 
 /*
 |--------------------------------------------------------------------------
@@ -17,13 +15,15 @@ use App\Http\Livewire\Places\Show as PlacesShow;
 |
 */
 
-Route::get('/', Home::class)->name('home');
+Route::get('/', [PageController::class, 'home'])->name('pages.home');
 
-Route::get('/contribute', Contribute::class)->name('contribute');
+Route::get('/contribute', [PageController::class, 'contribute'])->name('pages.contribute');
 
-Route::get('/subscribe', Subscribe::class)->name('subscribe');
+Route::get('/subscribe', [PageController::class, 'subscribe'])->name('pages.subscribe');
 
-Route::get('/places/{place:slug}', PlacesShow::class)->name('places.show');
+Route::post('/subscribe', [PageController::class, 'storeSubscriber'])->name('pages.subscribe.store');
+
+Route::get('/places/{place:slug}', [PlaceController::class, 'show'])->name('places.show');
 
 // Route::get('/dashboard', function () {
 //     return view('dashboard');

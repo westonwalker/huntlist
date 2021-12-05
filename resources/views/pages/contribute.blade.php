@@ -1,4 +1,4 @@
-<div>
+<x-app-layout>
     <x-home-link></x-home-link>
     <div class="text-center">
         <h1 class="text-4xl mb-3 tracking-tight font-extrabold text-white sm:text-5xl md:text-6xl text-left sm:text-center">
@@ -13,5 +13,4 @@
             Add to our list!
         </a>
     </div>
-
-</div>
+</x-app-layout>

@@ -11,8 +11,8 @@
       <div class="flex-1 flex px-2 lg:ml-6 justify-end">
         <div class="max-w-lg w-full lg:max-w-xs">
           <div class="flex justify-end">
-            <a href="{{ route('contribute') }}" class="rounded-md px-2 sm:px-4 py-1 sm:py-2 self-center text-xs sm:text-base text-white border-2 border-gray-700">Contribute</a>
-            <a href="{{ route('subscribe') }}" class="ml-3 rounded-md px-2 sm:px-4 py-1 sm:py-2 self-center text-xs sm:text-base bg-gradient-to-r from-red-500 to-pink-800 hover:from-yellow-400 hover:to-yellow-700 text-white">Sign Up</a>
+            <a href="{{ route('pages.contribute') }}" class="rounded-md px-2 sm:px-4 py-1 sm:py-2 self-center text-xs sm:text-base text-white border-2 border-gray-700">Contribute</a>
+            <a href="{{ route('pages.subscribe') }}" class="ml-3 rounded-md px-2 sm:px-4 py-1 sm:py-2 self-center text-xs sm:text-base bg-gradient-to-r from-red-500 to-pink-800 hover:from-yellow-400 hover:to-yellow-700 text-white">Sign Up</a>
           </div>
         </div>
       </div>

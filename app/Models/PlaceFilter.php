@@ -23,24 +23,31 @@ class PlaceFilter extends Model
     ],
     [
       'id' => 'whitetail_hunting',
-      'name' => 'Whitetail Hunting',
+      'name' => 'Whitetail Deer',
       'type' => 'filter',
       'slug' => '',
       'emoji' => '🦌',
     ],
     [
-      'id' => 'big_whitetails',
-      'name' => 'Big Whitetails',
+      'id' => 'mule_deer',
+      'name' => 'Mule Deer',
       'type' => 'filter',
       'slug' => '',
       'emoji' => '🦌',
     ],
     [
-      'id' => 'ice_fishing',
-      'name' => 'Ice Fishing',
+      'id' => 'elk',
+      'name' => 'Elk',
       'type' => 'filter',
       'slug' => '',
       'emoji' => '🦌',
+    ],
+    [
+      'id' => 'turkey',
+      'name' => 'Turkey',
+      'type' => 'filter',
+      'slug' => '',
+      'emoji' => '🦃',
     ]
   ];
 }
