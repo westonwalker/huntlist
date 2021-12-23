@@ -23,9 +23,11 @@
             text-shadow: 1px 1px 0 rgb(0 0 0 / 35%), 1px 1px 5px rgb(0 0 0 / 50%);
         }
     </style>
+    @production
     <!-- Fathom - beautiful, simple website analytics -->
     <script src="https://cdn.usefathom.com/script.js" data-site="KWEZYFTZ" defer></script>
     <!-- / Fathom -->
+    @endproduction
 </head>
 
 <body>

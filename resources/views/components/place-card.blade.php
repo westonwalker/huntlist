@@ -47,7 +47,7 @@
       </span>
       @endif
       @if($place->elk_score > 0)
-      <img src="{{ asset('elk-icon.png') }}" class="inline-block h-10 w-auto emoji mr-1" style="text-shadow: 1px 1px 0 rgb(0 0 0 / 35%),1px 1px 5px rgb(0 0 0 / 50%);" />
+      <img src="{{ asset('elk-icon.png') }}" class="inline-block h-10 w-auto emoji mr-1 pb-1" style="text-shadow: 1px 1px 0 rgb(0 0 0 / 35%),1px 1px 5px rgb(0 0 0 / 50%);" />
       @endif
       @if($place->turkey_score > 0)
       <span class="emoji mr-1" style="text-shadow: 1px 1px 0 rgb(0 0 0 / 35%),1px 1px 5px rgb(0 0 0 / 50%);">
