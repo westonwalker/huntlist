@@ -6,28 +6,28 @@
 </div>
 <div class="flex flex-wrap">
   <x-place-default-row type="link" text="Link" :link="$place->fishing_info">
-    <span class="mr-2">ℹ️</span>{{ $place->name }} Information
+    <span class="mr-2 emoji">ℹ️</span>{{ $place->name }} Information
   </x-place-default-row>
   <x-place-default-row type="link" text="Link" :link="$place->state->fishing_license_info">
-    <span class="mr-2">ℹ️</span>Fishing License
+    <span class="mr-2 emoji">ℹ️</span>Fishing License
   </x-place-default-row>
   <x-place-default-row type="text" :text="$place->fishing_acres">
-    <span class="mr-2">🌎</span>Acres
+    <span class="mr-2 emoji">🌎</span>Acres
   </x-place-default-row>
   <x-place-default-row type="link" text="Link" :link="$place->catch_limits">
-    <span class="mr-2">⚖️</span>Catch Limits
+    <span class="mr-2 emoji">⚖️</span>Catch Limits
   </x-place-default-row>
   <x-place-default-row type="text" :text="$place->average_water_depth">
-    <span class="mr-2">🌊</span>Avg Water Depth
+    <span class="mr-2 emoji">🌊</span>Avg Water Depth
   </x-place-default-row>
   <x-place-default-row type="text" :text="$place->fish_list">
-    <span class="mr-2">🐟</span>Fish List
+    <span class="mr-2 emoji">🐟</span>Fish List
   </x-place-default-row>
   <x-place-default-row type="text" :text="$place->boat_fishing">
-    <span class="mr-2">🛥️</span>Boat Fishing
+    <span class="mr-2 emoji">🛥️</span>Boat Fishing
   </x-place-default-row>
   <x-place-default-row type="text" :text="$place->has_boat_ramps ? 'Yes' : 'No'">
-    <span class="mr-2">📏</span>Boats Ramps?
+    <span class="mr-2 emoji">📏</span>Boats Ramps?
   </x-place-default-row>
 </div>
 @else

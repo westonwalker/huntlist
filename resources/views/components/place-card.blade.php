@@ -40,10 +40,7 @@
     </div>
   </div>
   <div class="absolute left-0 bottom-0 z-10 text-center w-full pb-4">
-    <!-- <h2 class="text-white font-bold text-base" style="text-shadow: 1px 1px 0 rgb(0 0 0 / 35%), 1px 1px 5px rgb(0 0 0 / 50%);">Peoria, IL</h1> -->
-    <div class="inline-block text-white font-bold text-3xl md:text-4xl items-center">
-      <!-- <span class="" style="text-shadow: 1px 1px 0 rgb(0 0 0 / 35%), 1px 1px 5px rgb(0 0 0 / 50%);">⭐</span>
-        <span class="" style="text-shadow: 1px 1px 0 rgb(0 0 0 / 35%), 1px 1px 5px rgb(0 0 0 / 50%);">💰</span> -->
+    <div class="inline-block text-white font-bold text-3xl md:text-3xl items-center">
       @if($place->whitetail_score > 0 || $place->mule_deer_score > 0)
       <span class="emoji mr-1" style="text-shadow: 1px 1px 0 rgb(0 0 0 / 35%),1px 1px 5px rgb(0 0 0 / 50%);">
         🦌
