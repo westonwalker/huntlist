@@ -8,6 +8,7 @@
 
     <title>{{ config('app.name', 'Huntlist') }}</title>
 
+    <link rel="icon" type="image/png" href="{{ asset('favicon-yellow.png') }}">
     <!-- Styles -->
     <link rel="stylesheet" href="{{ asset('css/app.css') }}">
     <style>

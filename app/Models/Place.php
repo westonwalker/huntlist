@@ -10,6 +10,11 @@ class Place extends Model
   use HasFactory;
   protected $guarded = [];
 
+  public function state()
+  {
+    return $this->belongsTo(State::class);
+  }
+
   public function getRouteKeyName()
   {
     return 'slug';

@@ -1,7 +1,7 @@
 @props(['place'])
 
 <div class="flex flex-wrap">
-  <x-place-default-row type="link" :text="$place->display_name" :link="$place->google_maps_url">
+  <x-place-default-row type="link" :text="$place->location_name" :link="$place->google_maps_url">
     <span class="mr-2">🌎</span>Location
   </x-place-default-row>
   <x-place-default-row :text="$place->current_weather">

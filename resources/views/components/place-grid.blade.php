@@ -43,8 +43,8 @@
                 </div>
                 <input x-model="searchValue" @click.away="showFilters = false" @click="showFilters = true" id="filter" name="filter"
                     class="block w-full pl-10 pr-3 py-2 border border-transparent rounded-md leading-5 bg-gray-700 text-gray-300 placeholder-gray-400 focus:outline-none focus:bg-white focus:border-white focus:ring-white focus:text-gray-900 sm:text-sm" placeholder="Search or filter" type="search">
-                <div x-cloak x-transition x-show="showFilters" class="cursor-pointer origin-top-left z-20 absolute left-0 mt-2 w-80 rounded-md shadow-lg py-1 bg-white ring-1 ring-black ring-opacity-5 focus:outline-none" role="menu" aria-orientation="vertical" aria-labelledby="user-menu-button"
-                    tabindex="-1">
+                <div style="z-index: 1000;" x-cloak x-transition x-show="showFilters" class="cursor-pointer origin-top-left z-20 absolute left-0 mt-2 w-80 rounded-md shadow-lg py-1 bg-white ring-1 ring-black ring-opacity-5 focus:outline-none" role="menu" aria-orientation="vertical"
+                    aria-labelledby="user-menu-button" tabindex="-1">
                     <div class="p-1">
                         <template x-for="filter in filters" :key="filter.id">
                             <div>

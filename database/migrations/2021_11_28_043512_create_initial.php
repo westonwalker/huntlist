@@ -16,23 +16,42 @@ class CreateInitial extends Migration
 
         Schema::create('states', function (Blueprint $table) {
             $table->id();
-            $table->string('name');
-            $table->string('country');
-            $table->string('hunting_license_info')->nullable();
-            $table->string('fishing_license_info')->nullable();
-            $table->string('hunting_season_info')->nullable();
+            $table->string('name')->unique();
+            $table->text('hunting_license_info')->nullable();
+            $table->text('fishing_license_info')->nullable();
+            $table->text('whitetail_seasons')->nullable();
+            $table->text('whitetail_permits')->nullable();
+            $table->text('mule_deer_seasons')->nullable();
+            $table->text('mule_deer_permits')->nullable();
+            $table->text('elk_seasons')->nullable();
+            $table->text('elk_permits')->nullable();
+            $table->text('turkey_seasons')->nullable();
+            $table->text('turkey_permits')->nullable();
             $table->timestamps();
         });
 
         Schema::create('places', function (Blueprint $table) {
             $table->id();
             $table->unsignedBigInteger('state_id')->nullable();
-            // $table->unsignedBigInteger('cover_image_id')->nullable();
             $table->string('name');
             $table->string('slug');
-            $table->string('display_name');
+            $table->string('location_name');
+            $table->string('contact_number')->nullable();
             $table->string('cover_image')->nullable();
-            $table->string('description')->nullable();
+            $table->text('description')->nullable();
+            $table->text('hunting_description')->nullable();
+            $table->text('fishing_description')->nullable();
+
+            $table->string('hunting_info')->nullable();
+            $table->string('fishing_info')->nullable();
+            $table->integer('hunting_acres')->nullable();
+            $table->integer('fishing_acres')->nullable();
+            $table->string('animal_list')->nullable();
+            $table->string('fish_list')->nullable();
+            $table->string('boat_fishing')->nullable();
+            $table->boolean('has_boat_ramps')->default(false);
+            $table->string('average_water_depth')->nullable();
+            $table->string('catch_limits')->nullable();
             $table->string('google_maps_url')->nullable();
             $table->string('location_lat_long')->nullable();
             $table->string('weather_historical')->nullable(); // json list of months and temps
@@ -52,7 +71,6 @@ class CreateInitial extends Migration
             $table->string('closest_bar_map')->nullable();
             $table->string('dangerous_animals')->nullable();
             $table->string('hunting_zone_info')->nullable();
-            $table->string('fishing_description')->nullable();
             $table->string('ice_fishing_months')->nullable();
             $table->decimal('overall_score')->nullable(0);
             $table->decimal('weather_score')->nullable(0);
@@ -102,13 +120,6 @@ class CreateInitial extends Migration
                 ->on('places')
                 ->onDelete('cascade');
         });
-
-        // Schema::table('places', function (Blueprint $table) {
-        //     $table->foreign('cover_image_id')
-        //         ->references('id')
-        //         ->on('images')
-        //         ->onDelete('cascade');
-        // });
 
         Schema::create('reviews', function (Blueprint $table) {
             $table->id();

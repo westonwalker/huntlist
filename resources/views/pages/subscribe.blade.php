@@ -2,11 +2,11 @@
     <x-home-link></x-home-link>
     <div class="text-center">
         <h1 class="text-4xl mb-3 tracking-tight font-extrabold text-white sm:text-5xl md:text-6xl text-left sm:text-center">
-            <span class="block xl:inline">Sign up to the</span>
-            <span class="md:block text-yellow-500">Hunt List</span>
+            <span class="block xl:inline">Sign up to our</span>
+            <span class="md:block text-yellow-500">Email List</span>
         </h1>
-        <p class="text-gray-200 text-lg sm:text-2xl sm:leading-10 font-medium mb-2 sm:mb-4 text-left sm:text-center">
-            Stay up to date with the Hunt List. When new <span class="text-yellow-500">locations</span> are added, we will <span class="text-yellow-500">email</span> you!
+        <p class="text-gray-200 text-lg sm:text-2xl sm:leading-10 font-medium mb-2 sm:mb-4 text-left sm:text-center max-w-3xl sm:mx-auto">
+            Eventually, Thehuntlist will include user accounts and much more! But for now, join our email list to stay up to date with what were doing.
         </p>
         @if (session('success'))
         <p class="text-green-500 text-lg sm:text-2xl sm:leading-10 font-medium mb-2 sm:mb-4 text-left sm:text-center">

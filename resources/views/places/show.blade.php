@@ -6,7 +6,7 @@
                     {{ $place->name }}
                 </h1>
                 <h2 class="text-white font-bold text-base md:text-lg" style="text-shadow: 1px 1px 0 rgb(0 0 0 / 35%), 1px 1px 5px rgb(0 0 0 / 50%);">
-                    {{ $place->display_name }}
+                    {{ $place->location_name }}
                 </h2>
             </div>
             <div class="absolute left-0 top-0 pt-4 pl-4">
@@ -35,9 +35,9 @@
                                 class="mr-4 cursor-pointer hover:text-yellow-500 hover:border-yellow-500 whitespace-nowrap py-4 px-1 border-b-4 font-medium">Scores</a>
                             <a :class="tab === 'local' ? 'border-yellow-500 text-yellow-500' : 'text-white'" @click.prevent="tab = 'local'; window.location.hash = 'local'" href="#"
                                 class="mr-4 cursor-pointer hover:text-yellow-500 hover:border-yellow-500 whitespace-nowrap py-4 px-1 border-b-4 font-medium">Local Info</a>
-                            <a :class="tab === 'hunting' ? 'border-yellow-500 text-yellow-500' : 'text-white'" @click.prevent="tab = 'hunting'; window.location.hash = 'hunting guide'" href="#"
+                            <a :class="tab === 'hunting' ? 'border-yellow-500 text-yellow-500' : 'text-white'" @click.prevent="tab = 'hunting'; window.location.hash = 'hunting'" href="#"
                                 class="mr-4 cursor-pointer hover:text-yellow-500 hover:border-yellow-500 whitespace-nowrap py-4 px-1 border-b-4 font-medium">Hunting Guide</a>
-                            <a :class="tab === 'fishing' ? 'border-yellow-500 text-yellow-500' : 'text-white'" @click.prevent="tab = 'fishing'; window.location.hash = 'fishing guide'" href="#"
+                            <a :class="tab === 'fishing' ? 'border-yellow-500 text-yellow-500' : 'text-white'" @click.prevent="tab = 'fishing'; window.location.hash = 'fishing'" href="#"
                                 class="mr-4 cursor-pointer hover:text-yellow-500 hover:border-yellow-500 whitespace-nowrap py-4 px-1 border-b-4 font-medium">Fishing Guide</a>
                             <a :class="tab === 'map' ? 'border-yellow-500 text-yellow-500' : 'text-white'" @click.prevent="tab = 'map'; window.location.hash = 'map'" href="#"
                                 class="mr-4 cursor-pointer hover:text-yellow-500 hover:border-yellow-500 whitespace-nowrap py-4 px-1 border-b-4 font-medium">Map</a>
@@ -51,24 +51,25 @@
             </div>
             <div x-cloak class="text-white mt-4">
                 <div x-show="tab === 'scores'" class="">
-                    <x-place-scores :place="$place"></x-place-scores>
+                    <x-place-scores :place="$place" />
                 </div>
                 <div x-show="tab === 'hunting'" class="">
+                    <x-place-hunting-guide :place="$place" />
                 </div>
                 <div x-show="tab === 'fishing'" class="">
-                    <p class="mt-2">Coming Soon!</p>
+                    <x-place-fishing-guide :place="$place" />
                 </div>
                 <div x-show="tab === 'local'" class="">
-                    <x-place-local :place="$place"></x-place-local>
+                    <x-place-local :place="$place" />
                 </div>
                 <div x-show="tab === 'map'" class="">
-                    <p class="mt-2">Coming Soon!</p>
+                    <p class="mt-6 text-2xl">Interactive maps coming soon!</p>
                 </div>
                 <div x-show="tab === 'reviews'" class="">
-                    <p class="mt-2">Coming Soon!</p>
+                    <p class="mt-6 text-2xl">Reviews coming soon!</p>
                 </div>
                 <div x-show="tab === 'weather'" class="">
-                    <p class="mt-2">Coming Soon!</p>
+                    <p class="mt-6 text-2xl">Historical monthly weather patterns coming soon!</p>
                 </div>
             </div>
 

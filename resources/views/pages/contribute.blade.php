@@ -6,11 +6,12 @@
             <span class="md:block text-yellow-500">Hunt List</span>
         </h1>
         <p class="text-gray-200 text-lg sm:text-2xl sm:leading-10 font-medium mb-10 sm:mb-11 text-left sm:text-center">
-            There is immense power when a group of people with similar interests gets together to work toward the same goals.
-            If you traveled to a public location to hunt or fish, add it to our <a class="text-yellow-500" href="/">airtable list</a>. We will verify the information and add it to thehuntlist.com.
+            There is immense power when a group of people with similar interests get together to work towards the same goal.
+            If you traveled to a public location to hunt or fish, add it to our database by filling out the form below. We will verify the information and add it to thehuntlist.com.
         </p>
-        <a href="#" class="mx-auto px-8 py-3 text-base font-bold rounded-md border-2 border-yellow-500 text-yellow-500 hover:bg-yellow-500 hover:text-white md:py-4 md:text-lg md:px-10">
-            Add to our list!
-        </a>
+        <p class="text-gray-200 text-lg sm:text-2xl sm:leading-10 font-medium mb-10 sm:mb-11 text-left sm:text-center">
+            If you add a new place to our database, you will get a lifetime free membership to the huntlist.
+        </p>
+        <iframe class="airtable-embed" src="https://airtable.com/embed/shrgc9DuELC3BHq2L?backgroundColor=yellow" frameborder="0" onmousewheel="" width="100%" height="600px" style="background: transparent; border: 1px solid #ccc;"></iframe>
     </div>
 </x-app-layout>

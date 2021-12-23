@@ -31,7 +31,27 @@ class DatabaseSeeder extends Seeder
             'created_at' => now(),
             'updated_at' => now(),
         ]);
+        $this->createIllinois();
         \App\Models\Subscriber::factory(10)->create();
         \App\Models\Place::factory(12)->create();
+    }
+
+    public function createIllinois()
+    {
+        DB::table('states')->insert([
+            'name' => 'Illinois',
+            'hunting_license_info' => 'https://www2.illinois.gov/dnr/LPR/Pages/DeerPermitsFees.aspx',
+            'fishing_license_info' => 'https://www.ifishillinois.org/',
+            'whitetail_seasons' => 'https://google.com',
+            'whitetail_permits' => 'https://google.com',
+            'mule_deer_seasons' => 'https://google.com',
+            'mule_deer_permits' => 'https://google.com',
+            'elk_seasons' => 'https://google.com',
+            'elk_permits' => 'https://google.com',
+            'turkey_seasons' => 'https://google.com',
+            'turkey_permits' => 'https://google.com',
+            'created_at' => now(),
+            'updated_at' => now(),
+        ]);
     }
 }

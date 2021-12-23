@@ -19,7 +19,7 @@
   <x-place-scores-row :score="$place->mule_deer_score">
     <span class="mr-2">🦌</span>Mule Deer
   </x-place-scores-row>
-  <x-place-scores-row :score="$place->current_weather_score" :description="$place->current_weather" type="weather">
+  <x-place-scores-row :score="$place->weather_score">
     <span class="mr-2">⛅️</span>Weather
   </x-place-scores-row>
   <x-place-scores-row :score="$place->nearest_hospital_distance" type="hospital">
