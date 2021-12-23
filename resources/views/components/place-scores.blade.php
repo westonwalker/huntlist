@@ -22,9 +22,9 @@
   <x-place-scores-row :score="$place->weather_score">
     <span class="mr-2 emoji">⛅️</span>Weather
   </x-place-scores-row>
-  <x-place-scores-row :score="$place->nearest_hospital_distance" type="hospital">
+  {{-- <x-place-scores-row :score="$place->nearest_hospital_distance" type="hospital">
     <span class="mr-2 emoji">🏥</span>Nearest Hospital
-  </x-place-scores-row>
+  </x-place-scores-row> --}}
   <x-place-scores-row :score="$place->cell_coverage_score" type="cell_coverage">
     <span class="mr-2 emoji">📱</span>Cell Coverage
   </x-place-scores-row>

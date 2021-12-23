@@ -12,7 +12,7 @@
             <div class="absolute left-0 top-0 pt-4 pl-4">
                 <x-home-link></x-home-link>
             </div>
-            <img class="h-48 w-full object-cover lg:h-64" src="{{ $place->cover_image }}" alt="">
+            <img class="h-48 w-full object-cover lg:h-64" src="{{ asset('places/' . $place->slug .'.png') }}" alt="">
         </div>
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 bg-gray-800">
             <div class="mt-4">
