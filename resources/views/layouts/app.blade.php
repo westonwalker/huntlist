@@ -20,6 +20,9 @@
             display: none !important;
         }
     </style>
+    <!-- Fathom - beautiful, simple website analytics -->
+    <script src="https://cdn.usefathom.com/script.js" data-site="KWEZYFTZ" defer></script>
+    <!-- / Fathom -->
 </head>
 
 <body>
