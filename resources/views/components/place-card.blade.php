@@ -62,6 +62,7 @@
     </div>
   </div>
   <div class="block w-full h-64 aspect-w-10 aspect-h-10 rounded-lg bg-gray-100 focus-within:ring-2 focus-within:ring-offset-2 focus-within:ring-offset-gray-100 focus-within:ring-green-500 overflow-hidden">
-    <img src="{{ asset('places/' . $place->slug .'.png') }}" alt="" class="object-cover w-full h-64 pointer-events-none" />
+    <img src="{{ $place->cover_image }}" alt="" class="object-cover w-full h-64 pointer-events-none" />
+    {{-- <img src="{{ asset('places/' . $place->slug .'.png') }}" alt="" class="object-cover w-full h-64 pointer-events-none" /> --}}
   </div>
 </a>
